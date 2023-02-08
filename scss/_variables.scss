@@ -1,0 +1,52 @@
+////Proyecto: Ejemplo sassfoc
+////@author Isa
+
+
+///mapa de colores 
+///@group colores
+$colores:(
+    "primary":rgb(12, 12, 11),
+    "secondary":#ffe,
+    "terciary":rgb(217, 181, 154),
+    "quaternary":rgb(177, 28, 28)
+);
+
+///Función que devuelve un color del vector colores
+///@group colores
+///@param {String} $color-name  --nombre color del vector colores
+///@return {color} --color en hexadecimal
+@function get-color ($color-name){
+    @return map-get($colores,$color-name);
+}
+
+//map de font sizes
+
+///mapa de tamaños de fuentes
+///@group tamanios
+$fonts:(
+    "xxl":6rem,
+    "xl":3rem,
+    "l":2.5,
+    "m":2rem,
+    "s":1.8rem,
+    "xs":1.6rem
+);
+
+///Función que devuelve un tamaños del vector fuentes
+///@group tamanios
+///@param {String} $font-size  --nombre tamaño del vector fuentes
+///@return {font} --tamaño en rem
+@function get-font ($font-size){
+    @return map-get($fonts,$font-size);
+}
+
+$font-weights:(
+    
+"light": 300,
+"regular":400,
+"bold":700
+)
+
+//map-get weight
+
+//fuente principal
