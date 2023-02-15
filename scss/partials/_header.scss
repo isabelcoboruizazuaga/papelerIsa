@@ -1,0 +1,70 @@
+.header {
+  /*Tamaño y posición*/
+  grid-row: 1/2;
+
+  /*Display*/
+  display: grid;
+  grid-template-rows: minmax(6vh, 8vh) minmax(14vh, 16vh);
+
+  /*PARTE DE RRSS Y ACCIONES*/
+  &-superior {
+    /*Posición y display*/
+    padding: 0.5vh;
+    padding-left: 0.5vw;
+    padding-right: .5vw;
+    grid-row: 1/2;
+    @include flex(row, center, space-between);
+
+    /*Color fondo*/
+    background-color: get-color("black");
+
+    /*Iconos rrss*/
+    i,
+    a {
+      color: get-color("primary");
+    }
+
+    /*Parte de acciones*/
+    &-actions {
+      @include flex;
+
+      a {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+/*PARTE DE BARRA DE NAVEGACIÓN*/
+.nav {
+  /*Posición*/
+  grid-row: 2/3;
+
+
+
+  /*Colores*/
+  background-color: get-color("secondary");
+
+  &-list {
+    /*Márgenes*/
+    margin: 0;
+    margin-left: -3vw;
+    margin-right: 7vw;
+    
+    /*Display*/
+    @include flex(row, center, space-between);
+
+
+
+    &-item {
+      .logo {
+        height: 14vh;
+      }
+
+      a {
+
+        color: get-color("black");
+      }
+    }
+  }
+}

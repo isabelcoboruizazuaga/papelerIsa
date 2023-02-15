@@ -1,29 +1,35 @@
 ////Proyecto: Ejemplo sassfoc
 ////@author Isa
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script:wght@700&display=swap');
+
 
 ///mapa de colores 
 ///@group colores
-$colores:(
-    "primary":rgb(12, 12, 11),
-    "secondary":#ffe,
-    "terciary":rgb(217, 181, 154),
-    "quaternary":rgb(177, 28, 28)
+$colores: (
+    "primary":#7EBF88,
+    "secondary":#5697A6,
+    "encabezadosPeques":#BF6576,
+    "botones":#648C6E,
+    "a":#C1545B,
+    "b":#055C75,
+    "c":#E299A2,
+    "fondo":#ffffff,
+    "black":#000000,
+    "elementos":#ffffff
 );
 
 ///Función que devuelve un color del vector colores
 ///@group colores
 ///@param {String} $color-name  --nombre color del vector colores
 ///@return {color} --color en hexadecimal
-@function get-color ($color-name){
-    @return map-get($colores,$color-name);
+@function get-color ($color-name) {
+    @return map-get($colores, $color-name);
 }
-
-//map de font sizes
 
 ///mapa de tamaños de fuentes
 ///@group tamanios
-$fonts:(
+$fonts: (
     "xxl":6rem,
     "xl":3rem,
     "l":2.5,
@@ -36,17 +42,29 @@ $fonts:(
 ///@group tamanios
 ///@param {String} $font-size  --nombre tamaño del vector fuentes
 ///@return {font} --tamaño en rem
-@function get-font ($font-size){
-    @return map-get($fonts,$font-size);
+@function get-font ($font-size) {
+    @return map-get($fonts, $font-size);
 }
 
-$font-weights:(
-    
-"light": 300,
-"regular":400,
-"bold":700
-)
+///mapa de pesos de fuentes
+///@group pesos
+$font-weights: (
+    "light": 300,
+    "regular":400,
+    "bold":700);
 
-//map-get weight
+  
+///Función que devuelve un peso del vector peso
+///@group pesos
+///@param {String} $font-weight  --nombre peso del vector pesos
+///@return {font-weight} --peso
+@function get-weight ($font-weight) {
+    @return map-get($font-weights, $font-weight);
+}  
 
-//fuente principal
+///Fuente Cormorant Garamond
+$garamond: 'Cormorant Garamond', serif;
+
+
+///Fuente Dancing Script
+$dancing: 'Dancing Script', cursive;
